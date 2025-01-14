@@ -1,3 +1,15 @@
+# ONLY FOR APPLE SILICON USERS
+
+
+Just download the `install.sh` script and run it in your terminal
+
+```
+chmod +x install.sh
+
+./install.sh
+```
+
+
 # TagGUI
 
 <img src='images/icon.png' alt='TagGUI icon' width='128'>
