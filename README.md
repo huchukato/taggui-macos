@@ -2,19 +2,43 @@
 
 Make sure you have
 
-- Python 3.11
-- Git
+> - Python 3.11
+> - Git
 
-already installed, instead install them via Homebrew
+already installed, instead install them via [Homebrew](https://brew.sh/)
 
-Download the `install.sh` script and run it in your terminal
 
+```bash
+# Clone the repository
+git clone https://github.com/huchukato/taggui-macos.git
+
+# Enter the folder
+cd taggui-macos
+
+# Create a virtual enviroment with venv, pyenv or conda
+python -m venv .venv
+
+# Activate it
+source .venv/bin/activate
 ```
-chmod +x install.sh
 
-./install.sh
+Execute the following commands
+
+```bash
+# Upgrade pip
+pip install --upgrade pip
+
+# Install Pytorch. Apple Silicon needs the nightly build
+pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
+# Install the dependencies
+pip install -r requirements-osx-arm64.txt
 ```
+Now you can run the gui
 
+```bash
+python taggui/run_gui.py
+```
 
 # TagGUI
 
