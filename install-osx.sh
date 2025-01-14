@@ -1,6 +1,6 @@
 #!/bin/bash
 
-venv_name="taggui"
+venv_name="taggui-macos"
 
 # Clona il repository git nel corrente diretto
 git clone https://github.com/huchukato/taggui-macos.git
@@ -13,7 +13,7 @@ if [ -d "$venv_name" ]; then
     echo "L'ambiente virtuale $venv_name esiste già."
 else
     # Crea l'ambiente virtuale con Python
-    python -m venv $venv_name
+    python3 -m venv $venv_name
 
     echo "L'ambiente virtuale $venv_name è stato creato correttamente."
 
@@ -23,10 +23,13 @@ else
     # Aggiorna pip all'interno dell'ambiente virtuale
     python -m pip install --upgrade pip
 
+    # Installa Pytorch
+    python -m pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
     # Installa le dipendenze dalla lista di pip REQUIREMENTS
     python -m pip install -r requirements-osx-arm64.txt
 
 fi
 
 # Avvia lo script Python
-python /taggui-macos/taggui/run_gui.py
+python /taggui/run_gui.py

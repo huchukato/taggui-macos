@@ -1,6 +1,3 @@
-#Apple Silicon needs Pytorch nightly
-pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
-
 accelerate==1.1.0
 bitsandbytes==0.42.0
 ExifRead==3.0.0
