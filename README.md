@@ -1,7 +1,13 @@
 # ONLY FOR APPLE SILICON USERS
 
+Make sure you have
 
-Just download the `install.sh` script and run it in your terminal
+- Python 3.11
+- Git
+
+already installed, instead install them via Homebrew
+
+Download the `install.sh` script and run it in your terminal
 
 ```
 chmod +x install.sh
