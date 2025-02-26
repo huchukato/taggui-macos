@@ -11,7 +11,7 @@ from auto_captioning.models.llava_next import (LlavaNext34b, LlavaNextMistral,
 from auto_captioning.models.moondream import Moondream1, Moondream2
 from auto_captioning.models.phi_3_vision import Phi3Vision
 from auto_captioning.models.wd_tagger import WdTagger
-from auto_captioning.models.xcomposer2 import Xcomposer2, Xcomposer2_4khd
+#from auto_captioning.models.xcomposer2 import Xcomposer2, Xcomposer2_4khd
 
 MODELS = [
     'fancyfeast/llama-joycaption-alpha-two-hf-llava',

@@ -28,9 +28,6 @@ Execute the following commands
 # Upgrade pip
 pip install --upgrade pip
 
-# Install Pytorch. Apple Silicon needs the nightly build
-pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
-
 # Install the dependencies
 pip install -r requirements-osx-arm64.txt
 ```
@@ -39,6 +36,7 @@ Now you can run the gui
 ```bash
 python taggui/run_gui.py
 ```
+
 
 # TagGUI
 
