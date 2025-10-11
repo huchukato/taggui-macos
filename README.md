@@ -13,8 +13,7 @@ models.
 - Keyboard-friendly interface for fast tagging
 - Tag autocomplete based on your own most-used tags
 - Integrated token counter (for Stable Diffusion)
-- Automatic caption and tag generation with models including CogVLM, LLaVA, WD
-  Tagger, and many more
+- Automatic caption and tag generation
 - Batch tag operations for renaming, deleting, and sorting tags
 - Advanced image list filtering
 
@@ -31,10 +30,7 @@ extract the files if you don't have it on your system.
   the OS, and I do not have one. You can still install and run the program
   manually (see below).
 - Linux users: You may need to install `libxcb-cursor0`.
-  (See [this Stack Overflow answer](https://stackoverflow.com/a/75941575).) You
-  may also have to install `python3.12-dev` or `python3.11-dev` (depending on
-  your Python version) if you get an error while trying to use a CogVLM2
-  model. (See [this issue](https://github.com/jhc13/taggui/issues/234).)
+  (See [this Stack Overflow answer](https://stackoverflow.com/a/75941575).)
 
 Alternatively, you can install manually by cloning this repository and
 installing the dependencies in `requirements.txt`.
