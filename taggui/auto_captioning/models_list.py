@@ -1,6 +1,4 @@
 from auto_captioning.auto_captioning_model import AutoCaptioningModel
-from auto_captioning.models.cogvlm import Cogvlm
-from auto_captioning.models.cogvlm2 import Cogvlm2
 from auto_captioning.models.florence_2 import Florence2, Florence2Promptgen
 from auto_captioning.models.joycaption import Joycaption
 from auto_captioning.models.kosmos_2 import Kosmos2
@@ -11,17 +9,9 @@ from auto_captioning.models.llava_next import (LlavaNext34b, LlavaNextMistral,
 from auto_captioning.models.moondream import Moondream1, Moondream2
 from auto_captioning.models.phi_3_vision import Phi3Vision
 from auto_captioning.models.wd_tagger import WdTagger
-from auto_captioning.models.xcomposer2 import Xcomposer2, Xcomposer2_4khd
 
 MODELS = [
     'fancyfeast/llama-joycaption-beta-one-hf-llava',
-    'internlm/internlm-xcomposer2-vl-7b-4bit',
-    'internlm/internlm-xcomposer2-vl-7b',
-    'internlm/internlm-xcomposer2-vl-1_8b',
-    'internlm/internlm-xcomposer2-4khd-7b',
-    'THUDM/cogvlm-chat-hf',
-    'THUDM/cogvlm2-llama3-chat-19B-int4',
-    'THUDM/cogvlm2-llama3-chat-19B',
     'microsoft/Florence-2-large-ft',
     'microsoft/Florence-2-large',
     'microsoft/Florence-2-base-ft',
@@ -64,10 +54,6 @@ MODELS = [
 
 def get_model_class(model_id: str) -> type[AutoCaptioningModel]:
     lowercase_model_id = model_id.lower()
-    if 'cogvlm2' in lowercase_model_id:
-        return Cogvlm2
-    if 'cogvlm' in lowercase_model_id:
-        return Cogvlm
     if 'florence' in lowercase_model_id:
         if 'promptgen' in lowercase_model_id:
             return Florence2Promptgen
@@ -94,8 +80,4 @@ def get_model_class(model_id: str) -> type[AutoCaptioningModel]:
         return Phi3Vision
     if 'wd' in lowercase_model_id and 'tagger' in lowercase_model_id:
         return WdTagger
-    if 'xcomposer2' in lowercase_model_id:
-        if '4khd' in lowercase_model_id:
-            return Xcomposer2_4khd
-        return Xcomposer2
     return AutoCaptioningModel
